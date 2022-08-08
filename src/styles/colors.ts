@@ -1,0 +1,16 @@
+export enum Colors {
+  backgroundDark = '#262A35',
+  backgroundLight = '#ffffff',
+  backgroundPopUp = '#F2F2F2',
+  danger = '#EA4444',
+  dangerLight = '#F95050',
+  dangerLighter = '#FFBCBC',
+  placeholder = '#9CA3AF',
+  primary = '#197ACF',
+  risk = '#EA7D24',
+  success = '#4BBC56',
+  successLight = '#4AB270',
+  textDark = '#606060',
+  textDarkSoft = '#6B6A6A',
+  warning = '#FFBC00',
+}
