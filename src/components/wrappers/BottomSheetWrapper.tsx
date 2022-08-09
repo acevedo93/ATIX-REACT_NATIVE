@@ -33,11 +33,13 @@ export const BottomSheetWrapper = React.forwardRef<
   const dispatch = useDispatch();
   const translateY = useSharedValue(0);
   const active = useSharedValue(false);
+  const handleAnimationEnd = (finished?: boolean) => {};
   const scrollTo = useCallback((destination: number) => {
     'worklet';
     active.value = destination !== 0;
-
-    translateY.value = withSpring(destination);
+    if (destination === 0) {
+    }
+    translateY.value = withSpring(destination, {damping: 500});
   }, []);
 
   const isActive = useCallback(() => {
@@ -96,7 +98,7 @@ const styles = StyleSheet.create({
     width: '100%',
     position: 'absolute',
     borderRadius: 25,
-    backgroundColor: Colors.backgroundLight,
+    backgroundColor: Colors.backgroundDark,
     top: SCREEN_HEIGHT,
     shadowColor: '#000',
     shadowOffset: {

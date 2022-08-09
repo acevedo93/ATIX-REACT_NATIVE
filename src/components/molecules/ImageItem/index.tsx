@@ -1,16 +1,37 @@
-import {H1} from '@ATIX/components/atoms';
+import {stylesShared} from '@ATIX/styles';
+import {Image, StyleSheet, View} from 'react-native';
 import React from 'react';
-import {View} from 'react-native';
-import {Asset} from 'react-native-image-picker';
-
+import {Image as ImageInterface} from '@ATIX/store/slices/images/imagesSlice';
+import {imageAdapter} from '@ATIX/utils/adapters';
 interface Props {
-  image: Asset;
+  image: ImageInterface;
 }
 
 export const ImageItem = ({image}: Props) => {
   return (
-    <View>
-      <H1>ImageItem</H1>
+    <View
+      style={[stylesShared.paddingHorizontal, stylesShared.paddingVertical]}>
+      <Image
+        source={{uri: imageAdapter(image.base64 || '')}}
+        style={styles.image}
+      />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  image: {
+    width: 100,
+    height: 100,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
+
+    elevation: 11,
+    borderRadius: 10,
+  },
+});

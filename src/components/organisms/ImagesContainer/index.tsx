@@ -6,7 +6,7 @@ import {langs} from './langs';
 
 export const ImagesContainer = () => {
   return (
-    <View>
+    <View style={{flex: 1}}>
       <H1>{langs.title}</H1>
       <ImageList />
     </View>

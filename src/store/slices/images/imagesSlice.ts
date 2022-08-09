@@ -1,9 +1,11 @@
-import {Image} from '@ATIX/models/Image';
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {Asset} from 'react-native-image-picker';
 
+export interface Image extends Asset {
+  id: string;
+}
 export interface ImagesState {
-  data: Asset[];
+  data: Image[];
 }
 
 const initialState: ImagesState = {
@@ -14,10 +16,10 @@ export const imageSlice = createSlice({
   name: 'images',
   initialState: initialState,
   reducers: {
-    saveImage: (state, {payload}: PayloadAction<Asset[]>) => {
+    saveImage: (state, {payload}: PayloadAction<Image[]>) => {
       state.data.push(...payload);
     },
-    deleteImage: (state, {payload}: PayloadAction<Asset>) => {
+    deleteImage: (state, {payload}: PayloadAction<Image>) => {
       state.data = state.data.filter(
         image => image.fileName !== payload.fileName,
       );

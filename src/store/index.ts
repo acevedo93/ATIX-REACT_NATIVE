@@ -14,7 +14,6 @@ import {imageSlice} from './slices/images';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['bottomSheet'],
 };
 
 const rootReducer = combineReducers({
