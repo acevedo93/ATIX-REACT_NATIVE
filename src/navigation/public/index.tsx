@@ -1,4 +1,4 @@
-import {DataScreen, ImagesScreen, PhotosScreen} from '@ATIX/screens/public';
+import {DataScreen, ImagesScreen} from '@ATIX/screens/public';
 import {stylesBottomTabsOptions, Tab, tabOptions} from '../generalConfig';
 import React from 'react';
 import {CustomMenuButton} from '@ATIX/components/atoms/CustomMenuButton';
