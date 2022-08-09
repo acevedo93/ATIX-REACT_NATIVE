@@ -18,6 +18,7 @@ export enum StyleConstants {
   btnRadiusShadow = 15,
 
   //Icons
+  largeIcon = 40,
   bigIcon = 24,
   mediumIcon = 18,
   smallIcon = 16,

@@ -13,6 +13,7 @@ export const SheetsList = () => {
       {sheets.length > 0 ? (
         <FlatList
           data={sheets}
+          numColumns={3}
           keyExtractor={item => item.id}
           renderItem={({item}) => <SheetItem sheet={item} />}
         />

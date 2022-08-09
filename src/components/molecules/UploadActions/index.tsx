@@ -43,9 +43,10 @@ export const UploadActions = () => {
       });
       const allow = checksizeFiles(pickerResult);
       if (!allow) {
-        setModalOpen(true);
+        return setModalOpen(true);
       }
       dispatch(saveSheet(sheetWithIdAdapter(pickerResult)));
+      dispatch(closeBottomSheet());
     } catch (err) {
       // User cancelled the picker, exit any further steps
       console.log(err);
