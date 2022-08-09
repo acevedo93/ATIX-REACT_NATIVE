@@ -1,4 +1,4 @@
-import {ImageActionsBottomSheet} from '@ATIX/components/organisms';
+import {UploadActionsBottomSheet} from '@ATIX/components/organisms';
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
@@ -12,7 +12,7 @@ export const MainNavigation = () => {
       <NavigationContainer ref={navigationRef}>
         <PublicNavigator />
       </NavigationContainer>
-      <ImageActionsBottomSheet />
+      <UploadActionsBottomSheet />
     </GestureHandlerRootView>
   );
 };

@@ -1,8 +1,6 @@
+import {SafeAreaView, StyleSheet, View} from 'react-native';
 import {stylesShared} from '@ATIX/styles';
 import React, {FunctionComponent} from 'react';
-
-import {SafeAreaView, StyleSheet, View} from 'react-native';
-
 interface Props {
   children: React.ReactNode;
   backgroundColor?: string;

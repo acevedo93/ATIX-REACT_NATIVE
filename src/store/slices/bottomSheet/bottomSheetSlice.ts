@@ -1,4 +1,4 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 interface BottomSheetState {
   isOpen?: boolean;
@@ -21,6 +21,9 @@ export const bottomSheetSlice = createSlice({
 
 export const {openBottomSheet, closeBottomSheet} = bottomSheetSlice.actions;
 
-export const isOpenBottomSheetSelector = (state: any) =>
-  state.bottomSheet.isOpen;
-export const typeBottomSheetSelector = (state: any) => state.bottomSheet.type;
+export const isOpenBottomSheetSelector = (state: {
+  bottomSheet: BottomSheetState;
+}) => state.bottomSheet.isOpen;
+export const typeBottomSheetSelector = (state: {
+  bottomSheet: BottomSheetState;
+}) => state.bottomSheet.type;

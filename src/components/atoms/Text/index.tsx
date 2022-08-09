@@ -1,8 +1,6 @@
 import {styleFonts} from '@ATIX/styles/fonts';
-import {stylesShared} from '@ATIX/styles/shared';
+import {Text} from 'react-native';
 import React from 'react';
-import {Pressable, Text} from 'react-native';
-
 interface Props {
   children: React.ReactNode;
   customStyles?: {[key: string]: any};

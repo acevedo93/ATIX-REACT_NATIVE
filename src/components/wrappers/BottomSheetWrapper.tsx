@@ -1,8 +1,3 @@
-import {closeBottomSheet} from '@ATIX/store/slices/bottomSheet';
-import {Colors} from '@ATIX/styles';
-import React, {useCallback, useImperativeHandle} from 'react';
-import {View, StyleSheet, Dimensions} from 'react-native';
-import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import Animated, {
   Extrapolate,
   interpolate,
@@ -10,7 +5,10 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from 'react-native-reanimated';
-import {useDispatch} from 'react-redux';
+import {Colors} from '@ATIX/styles';
+import {Gesture, GestureDetector} from 'react-native-gesture-handler';
+import {View, StyleSheet, Dimensions} from 'react-native';
+import React, {useCallback, useImperativeHandle} from 'react';
 
 const {height: SCREEN_HEIGHT} = Dimensions.get('window');
 
@@ -29,10 +27,8 @@ export const BottomSheetWrapper = React.forwardRef<
   BottomSheetRefProps,
   BottomSheetProps
 >(({children}, ref) => {
-  const dispatch = useDispatch();
   const translateY = useSharedValue(0);
   const active = useSharedValue(false);
-  const handleAnimationEnd = (finished?: boolean) => {};
   const scrollTo = useCallback((destination: number) => {
     'worklet';
     active.value = destination !== 0;

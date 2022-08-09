@@ -1,10 +1,10 @@
-import {DataScreen, ImagesScreen} from '@ATIX/screens/public';
-import {stylesBottomTabsOptions, Tab, tabOptions} from '../generalConfig';
-import React from 'react';
 import {CustomMenuButton} from '@ATIX/components/atoms/CustomMenuButton';
-import HomeIcon from '@assets/icons/home.svg';
-import DataIcon from '@assets/icons/data.svg';
+import {DataScreen, ImagesScreen} from '@ATIX/screens/public';
 import {StyleConstants} from '@ATIX/styles';
+import {stylesBottomTabsOptions, Tab, tabOptions} from '../generalConfig';
+import DataIcon from '@assets/icons/data.svg';
+import HomeIcon from '@assets/icons/home.svg';
+import React from 'react';
 
 export const PublicNavigator = () => {
   return (

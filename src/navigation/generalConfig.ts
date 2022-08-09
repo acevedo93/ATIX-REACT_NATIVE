@@ -1,12 +1,10 @@
-import {Colors} from '@ATIX/styles';
 import {
   BottomTabNavigationOptions,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
-import {createNavigationContainerRef} from '@react-navigation/native';
+import {Colors} from '@ATIX/styles';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-export type RootStackParamList = {};
-
+import {createNavigationContainerRef} from '@react-navigation/native';
 export type RootTabsParamList = {
   Sheets: undefined;
   Images: undefined;
@@ -32,10 +30,7 @@ interface OptionsProps {
 }
 
 export const tabOptions: BottomTabNavigationOptions = {
-  headerStyle: {
-    elevation: 0,
-    shadowOpacity: 0,
-  },
+  headerShown: false,
 };
 
 export const stylesBottomTabsOptions: OptionsProps = {

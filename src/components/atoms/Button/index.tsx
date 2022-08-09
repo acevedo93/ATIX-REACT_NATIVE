@@ -1,10 +1,10 @@
-import React from 'react';
 import {btnStyles, stylesShared} from '@ATIX/styles';
 import {Colors} from '@ATIX/styles';
+import {P} from '../Text';
 import {StyleConstants} from '@ATIX/styles';
 import {SvgProps} from 'react-native-svg';
 import {TouchableOpacity} from 'react-native';
-import {P} from '../Text';
+import React from 'react';
 
 interface Props {
   customStyles?: {[key: string]: any};

@@ -1,8 +1,8 @@
-import {stylesShared} from '@ATIX/styles';
-import {Image, StyleSheet, View} from 'react-native';
-import React from 'react';
 import {Image as ImageInterface} from '@ATIX/store/slices/images/imagesSlice';
+import {Image, StyleSheet, View} from 'react-native';
 import {imageAdapter} from '@ATIX/utils/adapters';
+import {stylesShared} from '@ATIX/styles';
+import React from 'react';
 interface Props {
   image: ImageInterface;
 }

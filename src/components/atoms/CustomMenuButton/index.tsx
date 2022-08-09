@@ -1,14 +1,14 @@
-import {TouchableOpacity, View} from 'react-native';
-import {styles} from './styles';
-import React from 'react';
-import EyeIcon from '@assets/icons/eye.svg';
-import {StyleConstants} from '@ATIX/styles';
-import {useDispatch, useSelector} from 'react-redux';
 import {
   closeBottomSheet,
   isOpenBottomSheetSelector,
   openBottomSheet,
 } from '@ATIX/store/slices/bottomSheet';
+import {StyleConstants} from '@ATIX/styles';
+import {styles} from './styles';
+import {TouchableOpacity, View} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
+import EyeIcon from '@assets/icons/eye.svg';
+import React from 'react';
 
 export const CustomMenuButton = () => {
   const dispatch = useDispatch();

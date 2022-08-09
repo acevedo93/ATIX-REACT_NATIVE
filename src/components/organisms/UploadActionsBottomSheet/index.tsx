@@ -1,17 +1,17 @@
-import {ImageActions} from '@ATIX/components/molecules';
 import {
   BottomSheetRefProps,
   BottomSheetWrapper,
   GeneralWrapper,
 } from '@ATIX/components/wrappers';
-import {
-  closeBottomSheet,
-  isOpenBottomSheetSelector,
-} from '@ATIX/store/slices/bottomSheet/bottomSheetSlice';
+import {Colors} from '@ATIX/styles';
+import {H1} from '@ATIX/components/atoms';
+import {isOpenBottomSheetSelector} from '@ATIX/store/slices/bottomSheet/bottomSheetSlice';
+import {langs} from './langs';
+import {UploadActions} from '@ATIX/components/molecules';
+import {useSelector} from 'react-redux';
 import React, {FunctionComponent, useEffect, useRef} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
 
-export const ImageActionsBottomSheet: FunctionComponent<any> = ({
+export const UploadActionsBottomSheet: FunctionComponent<any> = ({
   onClose,
   onOpen,
   title,
@@ -19,7 +19,6 @@ export const ImageActionsBottomSheet: FunctionComponent<any> = ({
 }) => {
   const ref = useRef<BottomSheetRefProps>(null);
   const isOpen = useSelector(isOpenBottomSheetSelector);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     if (isOpen) {
@@ -32,7 +31,8 @@ export const ImageActionsBottomSheet: FunctionComponent<any> = ({
   return (
     <BottomSheetWrapper ref={ref} {...props}>
       <GeneralWrapper>
-        <ImageActions />
+        <H1 customStyles={{color: Colors.textLight}}>{langs.uploadFiles}</H1>
+        <UploadActions />
       </GeneralWrapper>
     </BottomSheetWrapper>
   );

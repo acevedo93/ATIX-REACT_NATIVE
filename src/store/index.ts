@@ -11,6 +11,7 @@ import {
 import {setupListeners} from '@reduxjs/toolkit/query';
 import {bottomSheetSlice} from './slices/bottomSheet';
 import {imageSlice} from './slices/images';
+import {sheetsSlice} from './slices/sheets';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
@@ -20,6 +21,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   bottomSheet: bottomSheetSlice.reducer,
   images: imageSlice.reducer,
+  sheets: sheetsSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
