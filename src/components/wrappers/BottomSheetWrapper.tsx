@@ -37,7 +37,7 @@ export const BottomSheetWrapper = React.forwardRef<
     'worklet';
     active.value = destination !== 0;
 
-    translateY.value = withSpring(destination, {damping: 100});
+    translateY.value = withSpring(destination);
   }, []);
 
   const isActive = useCallback(() => {
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     width: '100%',
     position: 'absolute',
     borderRadius: 25,
-    backgroundColor: Colors.backgroundPopUp,
+    backgroundColor: Colors.backgroundLight,
     top: SCREEN_HEIGHT,
     shadowColor: '#000',
     shadowOffset: {

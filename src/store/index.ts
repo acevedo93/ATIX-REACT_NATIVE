@@ -10,13 +10,16 @@ import {
 } from '@reduxjs/toolkit';
 import {setupListeners} from '@reduxjs/toolkit/query';
 import {bottomSheetSlice} from './slices/bottomSheet';
+import {imageSlice} from './slices/images';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
+  whitelist: ['bottomSheet'],
 };
 
 const rootReducer = combineReducers({
   bottomSheet: bottomSheetSlice.reducer,
+  images: imageSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

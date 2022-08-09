@@ -9,7 +9,7 @@ export type RootStackParamList = {};
 
 export type RootTabsParamList = {
   Csv: undefined;
-  Photos: undefined;
+  Images: undefined;
   TakePhoto: undefined;
 };
 export const Stack = createNativeStackNavigator<RootStackParamList>();

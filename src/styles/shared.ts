@@ -125,4 +125,16 @@ export const stylesShared = StyleSheet.create({
   flex05: {
     flex: 0.5,
   },
+  paddingVertical: {
+    paddingVertical: 10,
+  },
+  paddingHorizontal: {
+    paddingHorizontal: 10,
+  },
+  marginVertical: {
+    marginVertical: 30,
+  },
+  marginHorizontal: {
+    marginHorizontal: 30,
+  },
 });

@@ -1,1 +1,2 @@
-export * from './GlobalBottomSheet';
+export * from './ImageActionsBottomSheet';
+export * from './ImagesContainer';

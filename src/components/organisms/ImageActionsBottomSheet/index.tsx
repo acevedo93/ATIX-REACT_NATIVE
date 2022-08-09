@@ -1,15 +1,14 @@
-import {H3} from '@ATIX/components/atoms';
+import {ImageActions} from '@ATIX/components/molecules';
 import {
   BottomSheetRefProps,
   BottomSheetWrapper,
   GeneralWrapper,
 } from '@ATIX/components/wrappers';
 import {isOpenBottomSheetSelector} from '@ATIX/store/slices/bottomSheet/bottomSheetSlice';
-import {Colors} from '@ATIX/styles';
 import React, {FunctionComponent, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
-export const GlobalBottomSheet: FunctionComponent<any> = ({
+export const ImageActionsBottomSheet: FunctionComponent<any> = ({
   onClose,
   onOpen,
   title,
@@ -20,7 +19,7 @@ export const GlobalBottomSheet: FunctionComponent<any> = ({
 
   useEffect(() => {
     if (isOpen) {
-      ref?.current?.scrollTo(-600);
+      ref?.current?.scrollTo(-200);
     } else {
       ref?.current?.scrollTo(0);
     }
@@ -28,8 +27,8 @@ export const GlobalBottomSheet: FunctionComponent<any> = ({
 
   return (
     <BottomSheetWrapper ref={ref} {...props}>
-      <GeneralWrapper backgroundColor={Colors.backgroundPopUp}>
-        <H3>hola</H3>
+      <GeneralWrapper>
+        <ImageActions />
       </GeneralWrapper>
     </BottomSheetWrapper>
   );

@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     width: 70,
     height: 70,
     borderWidth: 10,
-    borderColor: Colors.backgroundLight,
+    borderColor: Colors.backgroundPopUp,
     borderRadius: 35,
   },
   inner: {

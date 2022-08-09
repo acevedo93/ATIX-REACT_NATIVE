@@ -1,4 +1,4 @@
-import {DataScreen, PhotosScreen} from '@ATIX/screens/public';
+import {DataScreen, ImagesScreen, PhotosScreen} from '@ATIX/screens/public';
 import {stylesBottomTabsOptions, Tab, tabOptions} from '../generalConfig';
 import React from 'react';
 import {CustomMenuButton} from '@ATIX/components/atoms/CustomMenuButton';
@@ -21,16 +21,16 @@ export const PublicNavigator = () => {
             );
           },
         }}
-        name="Photos"
-        component={PhotosScreen}
+        name="Images"
+        component={ImagesScreen}
       />
       <Tab.Screen
         name="TakePhoto"
-        component={PhotosScreen}
+        component={ImagesScreen}
         options={{
           headerShown: false,
-          tabBarButton: props => {
-            return <CustomMenuButton {...props} onPress={console.log} />;
+          tabBarButton: _ => {
+            return <CustomMenuButton />;
           },
         }}
       />
