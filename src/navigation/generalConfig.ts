@@ -8,7 +8,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 export type RootStackParamList = {};
 
 export type RootTabsParamList = {
-  Csv: undefined;
+  Sheets: undefined;
   Images: undefined;
   TakePhoto: undefined;
 };

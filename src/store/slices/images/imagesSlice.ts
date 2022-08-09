@@ -20,9 +20,7 @@ export const imageSlice = createSlice({
       state.data.push(...payload);
     },
     deleteImage: (state, {payload}: PayloadAction<Image>) => {
-      state.data = state.data.filter(
-        image => image.fileName !== payload.fileName,
-      );
+      state.data = state.data.filter(image => image.id !== payload.id);
     },
     deleteImages: state => {
       state.data = [];

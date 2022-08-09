@@ -46,7 +46,7 @@ export const PublicNavigator = () => {
             );
           },
         }}
-        name="Data"
+        name="Sheets"
         component={DataScreen}
       />
     </Tab.Navigator>

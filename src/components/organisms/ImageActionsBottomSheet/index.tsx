@@ -4,9 +4,12 @@ import {
   BottomSheetWrapper,
   GeneralWrapper,
 } from '@ATIX/components/wrappers';
-import {isOpenBottomSheetSelector} from '@ATIX/store/slices/bottomSheet/bottomSheetSlice';
+import {
+  closeBottomSheet,
+  isOpenBottomSheetSelector,
+} from '@ATIX/store/slices/bottomSheet/bottomSheetSlice';
 import React, {FunctionComponent, useEffect, useRef} from 'react';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 export const ImageActionsBottomSheet: FunctionComponent<any> = ({
   onClose,
@@ -16,6 +19,7 @@ export const ImageActionsBottomSheet: FunctionComponent<any> = ({
 }) => {
   const ref = useRef<BottomSheetRefProps>(null);
   const isOpen = useSelector(isOpenBottomSheetSelector);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (isOpen) {

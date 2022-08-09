@@ -6,7 +6,6 @@ import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import Animated, {
   Extrapolate,
   interpolate,
-  runOnJS,
   useAnimatedStyle,
   useSharedValue,
   withSpring,
@@ -58,7 +57,6 @@ export const BottomSheetWrapper = React.forwardRef<
       translateY.value = Math.max(translateY.value, MAX_TRANSLATE_Y);
     })
     .onEnd(() => {
-      runOnJS(dispatch)(closeBottomSheet());
       if (translateY.value > -SCREEN_HEIGHT / 3) {
         scrollTo(0);
       } else if (translateY.value < -SCREEN_HEIGHT / 1.5) {
