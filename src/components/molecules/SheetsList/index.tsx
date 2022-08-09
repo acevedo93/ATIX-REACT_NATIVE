@@ -2,7 +2,7 @@ import {FlatList} from 'react-native-gesture-handler';
 import {langs} from './langs';
 import {SheetItem} from '../SheetItem';
 import {sheetsSelector} from '@ATIX/store/slices/sheets';
-import {ToolTip} from '@ATIX/components/atoms';
+import {ToolTip} from '@ATIX/components/atoms/ToolTip';
 import {useSelector} from 'react-redux';
 import React from 'react';
 

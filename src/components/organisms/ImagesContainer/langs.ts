@@ -1,4 +1,4 @@
 export enum langs {
-  title = 'Your Images',
+  title = 'Your Images!',
   delete = 'delete all',
 }
