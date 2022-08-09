@@ -1,4 +1,4 @@
-import {Colors, StyleConstants, stylesShared} from '@ATIX/styles';
+import {stylesShared} from '@ATIX/styles';
 import {P} from '@ATIX/components/atoms';
 import {StyleSheet, View} from 'react-native';
 import React from 'react';

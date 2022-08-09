@@ -4,6 +4,10 @@
 
 React native application for APIX, this project uses atomic design and flux as main arquitectures.
 
+### Disclaimers
+
+the react-native-document-picker library have problems in ios emulator, but should be work fine in android and physical iphones
+
 Although the requirements are small, the project was made with the architecture of a large project in mind.
 
 ### Atomic design
