@@ -9,12 +9,15 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 import {setupListeners} from '@reduxjs/toolkit/query';
+import {bottomSheetSlice} from './slices/bottomSheet';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
 };
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  bottomSheet: bottomSheetSlice.reducer,
+});
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 export const store = configureStore({
@@ -31,7 +34,6 @@ export const persistor = persistStore(store);
 setupListeners(store.dispatch);
 
 export type RootState = ReturnType<typeof store.getState>;
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 
 export type AppDispatch = Dispatch<AnyAction> &
   ThunkDispatch<RootState, null, AnyAction>;

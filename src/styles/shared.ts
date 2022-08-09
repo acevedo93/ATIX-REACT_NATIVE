@@ -16,6 +16,13 @@ export enum StyleConstants {
   btnLarge = 24,
   btnOpacity = 0.5,
   btnRadiusShadow = 15,
+
+  //Icons
+  bigIcon = 24,
+  mediumIcon = 18,
+  smallIcon = 16,
+  tinyIcon = 14,
+  xsmallIcon = 12,
 }
 
 export const stylesShared = StyleSheet.create({

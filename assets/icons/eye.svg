@@ -1,0 +1,12 @@
+<svg 
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+  <defs>
+    <style>.cls-password-1{fill:#197ACF;}.cls-password-2{fill:none;}</style>
+  </defs>
+  <title>See-Password_icon</title>
+  <g id="Layer_2_password" data-name="Layer 2">
+    <g id="password-icon" data-name="PASSWORD"><path class="cls-password-1" d="M11,2a11,11,0,0,1,10.82,9A11,11,0,0,1,.18,11,11,11,0,0,1,11,2Zm0,16a9,9,0,0,0,8.78-7A9,9,0,0,0,2.22,11,9,9,0,0,0,11,18Zm0-2.5A4.5,4.5,0,1,1,15.5,11,4.49,4.49,0,0,1,11,15.5Zm0-2A2.5,2.5,0,1,0,8.5,11,2.5,2.5,0,0,0,11,13.5Z"/>
+      <rect class="cls-password-2" width="22" height="22"/>
+    </g>
+  </g>
+</svg>
