@@ -4,6 +4,8 @@
 
 React native application for APIX, this project uses atomic design and flux as main arquitectures.
 
+Although the requirements are small, the project was made with the architecture of a large project in mind.
+
 ### Atomic design
 
 [https://bradfrost.com/blog/post/atomic-web-design/](https://bradfrost.com/blog/post/atomic-web-design/)
@@ -20,6 +22,7 @@ React native application for APIX, this project uses atomic design and flux as m
   - redux persist
 - Debugger
 - typescript
+- Animations -> react-native-reanimated
 
 ### Installation
 
